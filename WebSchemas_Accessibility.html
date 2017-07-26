@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>WebSchemas/Accessibility 日本語訳</title>
+</head>
+<body>
+<div>
+<p>このページは、2017年5月23日18時25分に更新された <a href="https://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas/Accessibility</a> の訳です。</p>
+<h1>WebSchemas/Accessibility 日本語訳</h1>
+<h2>語彙</h2>
+<p>このページは、schema.org に含まれるバージョン 1.0 のプロパティを説明する。プロジェクトの作業は進行中であり、<a href="/wiki/WebSchemas/Accessibility/ToDo" title="WebSchemas/Accessibility/ToDo">1.0 以降に追加のプロパティが検討されている</a>。参加方法については、<a href="http://www.a11ymetadata.org">a11ymetadata.org</a> の Web サイトを参照されたい。</p>
+<p>（注：これらの値の多くは、<a href="http://www.imsglobal.org/accessibility/afav3p0pd/AfA3p0_DESinfoModel_v1p0pd.html#_Toc323719835">IMS Global Access for All (AfA) Information Model Data Element Specification</a> から派生したものであり、いくつかの項目で詳細がある。）</p>
+<h3>アクセシビリティ用語（バージョン 2.0）</h3>
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<th>プロパティ</th>
+<th>期待される型</th>
+<th>期待される値</th>
+<th>概要</th>
+</tr>
+<tr>
+<td>accessibilityFeature</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>alternativeText</li>
+<li>annotations</li>
+<li>audioDescription</li>
+<li>bookmarks</li>
+<li>braille</li>
+<li>captions</li>
+<li>ChemML</li>
+<li>describedMath</li>
+<li>displayTransformability</li>
+<li>highContrastAudio</li>
+<li>highContrastDisplay</li>
+<li>index</li>
+<li>largePrint</li>
+<li>latex</li>
+<li>longDescription</li>
+<li>MathML</li>
+<li>none</li>
+<li>printPageNumbers</li>
+<li>readingOrder</li>
+<li>rubyAnnotations</li>
+<li>signLanguage</li>
+<li>structuralNavigation</li>
+<li>synchronizedAudioText</li>
+<li>tableOfContents</li>
+<li>taggedPDF</li>
+<li>tactileGraphic</li>
+<li>tactileObject</li>
+<li>timingControl</li>
+<li>transcript</li>
+<li>ttsMarkup</li>
+<li>unlocked</li>
+</ul>
+</td>
+<td>
+<p>例えば、アクセス可能なメディアなど、リソースのコンテンツ機能は、アクセシビリティと代替の拡張をサポートした。</p>
+<p>詳細については、以下の accessibilityFeature の詳細セクションを参照されたい。</p>
+</td>
+</tr>
+<tr>
+<td>accessibilityHazard</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>flashing</li>
+<li>noFlashingHazard</li>
+<li>motionSimulation</li>
+<li>noMotionSimulationHazard</li>
+<li>sound</li>
+<li>noSoundHazard</li>
+<li>unknown</li>
+</ul>
+</td>
+<td>
+<p>一部のユーザーにとって生理学的に危険となる表現されたリソースの特性。<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure.html">WCAG 2.0 ガイドライン 2.3</a> に関連する。</p>
+<p>危険性のいずれもが知られていない場合、3つの負の性質を全て設定するべきである。コンテンツに危険性がある場合、その危険性には正のアサーション、他には負のアサーションを包含する。</p>
+<p>プロパティが正または負に設定されていない、または不明な設定の場合、危険性の状態は不明である。</p>
+</td>
+</tr>
+<tr>
+<td>accessibilityAPI</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>AndroidAccessibility</li>
+<li>ARIA</li>
+<li>ATK</li>
+<li>AT-SPI</li>
+<li>BlackberryAccessibility</li>
+<li>iAccessible2</li>
+<li>iOSAccessibility</li>
+<li>JavaAccessibility</li>
+<li>MacOSXAccessibility</li>
+<li>MSAA</li>
+<li>UIAutomation</li>
+</ul>
+</td>
+<td>リソースは、参照されたアクセシビリティ API と互換性があることを示す。</td>
+</tr>
+<tr>
+<td>accessibilityControl</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>fullKeyboardControl</li>
+<li>fullMouseControl</li>
+<li>fullSwitchControl</li>
+<li>fullTouchControl</li>
+<li>fullVideoControl</li>
+<li>fullVoiceControl</li>
+</ul>
+</td>
+<td>全てのアプリケーション機能にアクセスできるひとつ以上の入力メソッドを識別する。</td>
+</tr>
+<tr>
+<td>accessMode</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>auditory</li>
+<li>chartOnVisual</li>
+<li>chemOnVisual</li>
+<li>colorDependent</li>
+<li>diagramOnVisual</li>
+<li>mathOnVisual</li>
+<li>musicOnVisual</li>
+<li>tactile</li>
+<li>textOnVisual</li>
+<li>textual</li>
+<li>visual</li>
+</ul>
+</td>
+<td>人間が情報を処理または知覚することができる人間の知覚システムまたは認知能力。</td>
+</tr>
+<tr>
+<td>accessModeSufficient</td>
+<td><a href="http://schema.org/Text">Text</a></td>
+<td>
+<ul>
+<li>auditory</li>
+<li>tactile</li>
+<li>textual</li>
+<li>visual</li>
+</ul>
+</td>
+<td>リソースの全ての知的コンテンツを理解するのに十分な単一または複合した accessModode のリスト。</td>
+</tr>
+<tr>
+<td>accessibilitySummary</td>
+<td><a href="http://schema.org/Text">Text</a>
+</td>
+<td>
+<p>アクセシビリティ機能と欠如の人間が可読可能な要約。</p>
+</td>
+<td>他のアクセシビリティメタデータと一貫するが、「短い概要は存在するが、長い概要は非視覚的のユーザーに必要である。」や「短い概要が存在し、長い概要は必要ない。」などの微妙な表現を含む、特定のアクセシビリティ機能または欠如の人間が可読可能な要約。</td>
+</tr>
+</table>
+<h2>accessibilityFeature の詳細</h2>
+<p>accessibilityFeature プロパティは多くの異なる値をサポートしており、アルファベット順に並べ替えると、それらの多くは関連性がないように見える。このセクションでは、その値を構成グループに分割し、それらが包含しているものを説明する。</p>
+<p>注意すべき4つの機能グループがある。</p>
+<ul>
+<li>変換機能は、コンテンツを個人のニーズに合わせて適切にするために、ユーザーが制御できるコンテンツの特性を識別する。テキストのフォントサイズを変更する機能は、変換プロパティの一例である。</li>
+<li>構造とナビゲーション機能は、目次または索引を含めるなど、メディア内の移動を簡略化するために提供されるナビゲーション補助を識別する。</li>
+<li>制御機能は、ユーザによって完全に制御可能なコンテンツと機能を識別する。時間調節のインタフェースを一時停止する機能が一例である。</li>
+<li>拡張機能は、リソースへの代替アクセスを提供するコンテンツ機能を識別する。alt 属性に代替テキストを含めることは、最も一般的に識別可能な拡張機能のひとつである。</li>
+</ul>
+<p>次の各セクションでは、これらのクラス値のひとつをより詳細に調べ、値のリストとその期待される使用方法について説明する。</p>
+<p>このプロパティには、ページはチェック済みだが特殊な拡張機能は含まれていないことを示すために設定できる値「none」も含まれている。この値は、コンテンツのアクセシブルな性質に関する記述が作成できないことを示すためにも使用できる。この値を設定すると、アクセシビリティを評価されたページとそうでないページを区別できる（つまり、accessibilityFeature プロパティが設定されていない可能性についての曖昧さを取り除くためである）。</p>
+<h3>変換のための機能</h3>
+<p>変換機能は、コンテンツが変換された状態で利用可能か、またはユーザーがそれを変換できるように設定できるかについて述べている。これらのプロパティは、<a href="http://www.w3.org/TR/WCAG20/#visual-audio-contrast">WCAG 2.0 セクション 1.4</a> から派生している。</p>
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<th>期待される値</th>
+<th>概要</th>
+</tr>
+<tr>
+<td>
+<p>highContrastAudio</p>
+</td>
+<td>前景に発話を含む音声コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html">WCAG 達成基準 1.4.7</a> に設定されているコントラストの閾値を満たしている。達成基準は音声の適合を追加できるが、必須ではない。<ul>
+<li>/noBackground - 背景のノイズが存在しない</li>
+<li>/reducedBackground - 前景の発話と背景のノイズとの間に、少なくとも 20db の差がある</li>
+<li>/switchableBackground - 背景のノイズをオフにできる（十分なコントラストが満たされない場合もある）</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>
+<p>highContrastDisplay</p>
+</td>
+<td>コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html">WCAG 達成基準 1.4.6</a> に設定されている視覚的なコントラストの閾値を満たしている。</td>
+</tr>
+<tr>
+<td>
+<p>largePrint</p>
+</td>
+<td><p>コンテンツは、大きな印刷物のガイドラインに適合するようにフォーマットされている。特定の印刷文字のサイズは、拡張としてオプションで追加できる（例えば、largePrint/18）。</p>
+<p>フォントサイズを大きくすることができる場合、プロパティは設定されない。displayTransformability を参照されたい。</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>displayTransformability</p>
+</td>
+<td><p>表示プロパティは、ユーザによって制御可能である。このプロパティは、たとえば、カスタム CSS スタイルシートをコンテンツに適用して外観を制御できる場合、設定できる。また、Word や PDF のようなドキュメント形式のスタイリングを変更できることを示すために使用することもできる。</p>
+<p>このプロパティは、意味のある制御を可能にする特定の表示プロパティを識別するために変更できる。修飾子は、CSS がドキュメントのスタイル形式でない場合でも、CSS プロパティ名の形式を取る必要がある。</p>
+<ul>
+<li>/font-size</li>
+<li>/font-family</li>
+<li>/line-height</li>
+<li>/word-spacing</li>
+<li>/color</li>
+<li>/background-color</li>
+</ul>
+<p>多くの CSS 表示プロパティは変更できるが、（画像ベースのコンテンツなど）全てのアクセシビリティを向上させるわけではないことに注意されたい。</p>
+</td>
+</tr>
+</table>
+<h3>構造とナビゲーションのための機能</h3>
+<p>次の値は、作品で利用できる重要なナビゲーション補助を識別する。</p>
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<th>期待される値</th>
+<th>概要</th>
+</tr>
+<tr>
+<td>
+<p>annotations</p>
+</td>
+<td>作品には、作者、インストラクターおよび/またはその他の注釈が包含されている。</td>
+</tr>
+<tr>
+<td>
+<p>bookmarks</p>
+</td>
+<td>作品に、キーポイントへのナビゲーションを容易にするブックマークが包含されている。</td>
+</tr>
+<tr>
+<td>
+<p>index</p>
+</td>
+<td>作品に、コンテンツへの索引が包含されている。</td>
+</tr>
+<tr>
+<td>
+<p>printPageNumbers</p>
+</td>
+<td>作品に、印刷物のページ番号と同等のものが包含されている。この設定は、等価の印刷物がある電子書籍で最も一般的に使用される。</td>
+</tr>
+<tr>
+<td>
+<p>readingOrder</p>
+</td>
+<td>コンテンツの読み上げ順序は、（例えば、図表、サイドバーおよびその他の補助的なコンテンツが自動的にスキップされたり、手動でエスケープされるようにマークアップされているなど）マークアップで明確に定義されている。</td>
+</tr>
+<tr>
+<td>
+<p>structuralNavigation</p>
+</td>
+<td>ドキュメントの階層を完全かつ正確に反映した作品の見出しの使用は、支援技術によるナビゲーションを可能にする。</td>
+</tr>
+<tr>
+<td>
+<p>taggedPDF</p>
+</td>
+<td> PDF 内の構造には、コンテンツのナビゲーションを改善するためのタグが付けられている。</td>
+</tr>
+</table>
+<h3>コンテンツ制御のための機能</h3>
+<p>次の値は、ユーザーがコンテンツへのアクセスを向上させるために制御できるコンテンツの側面を示す。これらの制御機能を、コンテンツを制御するために使用される入力メソッドを定義する accessibilityControl プロパティと混同しないようにされたい。</p>
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<th>期待される値</th>
+<th>概要</th>
+</tr>
+<tr>
+<td>
+<p>synchronizedAudioText</p>
+</td>
+<td>音声とテキストの両方を提供するリソースを、同時にレンダリングできる情報を記述する。同期の精度は指定されていない。この用語は、同期される唯一の材料がドキュメントの見出しである時は推奨されない。</td>
+</tr>
+<tr>
+<td>
+<p>timingControl</p>
+</td>
+<td>時間の経過でインタラクションするコンテンツの場合、この値は、（例えば、一時停止とリセット）ユーザーが必要に応じてタイミングを制御できることを示す。</td>
+</tr>
+<tr>
+<td>
+<p>unlocked</p>
+</td>
+<td>デジタル著作権管理やその他のコンテンツ制限プロトコルは、リソースに適用されていない。</td>
+</tr>
+</table>
+<h3>拡張のための機能</h3>
+<p>拡張とは、そのソースと異なるアクセスモードで知的コンテンツの提供をすることである。</p>
+<table border="1" cellspacing="0" cellpadding="4">
+<tr>
+<th>期待される値</th>
+<th>概要</th>
+</tr>
+<tr>
+<td>
+<p>alternativeText</p>
+</td>
+<td>代替テキストは、（例えば、HTML alt 属性を介して）視覚的なコンテンツに提供されている。</td>
+</tr>
+<tr>
+<td>
+<p>audioDescription</p>
+</td>
+<td>（例えば、HTML5 track 要素を介して）解説放送（オーディオ ディスクリプション）が利用できる。</td>
+</tr>
+<tr>
+<td>
+<p>braille</p>
+</td>
+<td>コンテンツは点字形式であるか、または代替版が点字で利用できる。この値は、点字の異なるタイプ（/ASCII、/unicode、/music、/math、/chemistry または /nemeth）、および点字が短縮されているかどうか（/grade1 および /grade2）を識別するために拡張できる。点字が適合するコードなどの、その他の拡張も指定できる。</td>
+</tr>
+<tr>
+<td>
+<p>captions</p>
+</td>
+<td>同期キャプションが、音声と動画コンテンツで利用できることを示す。</td>
+</tr>
+<tr>
+<td>
+<p>ChemML</p>
+</td>
+<td>化学情報が、ChemML マークアップ言語を使用してコード化されていることを示す。</td>
+</tr>
+<tr>
+<td>
+<p>describedMath</p>
+</td>
+<td>数学の方程式のテキストによる説明が、画像ベースの方程式の alt 属性、MathML 方程式の alttext 属性、または他の手段のいずれかによって包含されている。</td>
+</tr>
+<tr>
+<td>
+<p>latexMathML</p>
+</td>
+<td>数学の方程式と公式が、指定されたマークアップ言語を使用してエンコードされていることを示す。</td>
+</tr>
+<tr>
+<td>
+<p>longDescription</p>
+</td>
+<td>概要が、画像ベースのビジュアルコンテンツ、および/または表、計算、図表、チャートなどの複雑な構造のために提供されている。</td>
+</tr>
+<tr>
+<td>
+<p>rubyAnnotations</p>
+</td>
+<td>ルビ注釈が、コンテンツに提供されることを示す。ルビ注釈は、中国語や日本語のような言語のために、文字の発音ガイドとして使用される。難しい漢字や CJK の表意文字を、よりアクセシブルにする。ruby/annotations/* の欠如は、CJK の表意文字にルビがないことを意味する。</td>
+</tr>
+<tr>
+<td>
+<p>signLanguage</p>
+</td>
+<td>同期している手話は、音声および動画コンテンツで利用できる。値は、ISO 639 手話コードを追加することによって拡張してもよい。例えば、アメリカ手話は /sgn-en-us である。</td>
+</tr>
+<tr>
+<td>
+<p>tactileGraphic</p>
+</td>
+<td>触図が提供されている。例えば、触図のための BANA ガイドラインと標準に記述されているように。</td>
+</tr>
+<tr>
+<td>
+<p>tactileObject</p>
+</td>
+<td>コンテンツは、触覚的な 3D オブジェクトであるか、または生成するモデルが包含されている。</td>
+</tr>
+<tr>
+<td>
+<p>transcript</p>
+</td>
+<td>音声コンテンツのトランスクリプトが利用可能であることを示す。</td>
+</tr>
+<tr>
+<td>
+<p>ttsMarkup</p>
+</td>
+<td> SSML、PLS 辞書および CSS3 Speech プロパティのうちのひとつ以上が、TTS 再生の品質を高めるために使用されている。</td>
+</tr>
+</table>
+</body>
+</html>
