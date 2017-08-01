@@ -3,10 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <title>WebSchemas/Accessibility 日本語訳</title>
+<style>
+.annotation{color:#f00;}
+</style>
 </head>
 <body>
 <div>
-<p>このページは、2017年5月23日18時25分に更新された <a href="https://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas/Accessibility</a> の訳です。</p>
+<p>このページは、2017年5月23日18時25分に更新された <a href="https://www.w3.org/wiki/WebSchemas/Accessibility">WebSchemas/Accessibility</a> の一部を抜粋して訳したものです。訳に伴い一部編集している箇所があります。また、<a href="https://www.w3.org/Submission/2017/SUBM-epub-a11y-20170125/#sec-conf-discovery">2.1 発見可能な EPUB 出版物 - EPUB Accessibility 1.0</a>で使用する際の補足も追加しました。この補足は訳者の個人的な見解です。</p>
 <h1>WebSchemas/Accessibility 日本語訳</h1>
 <h2>語彙</h2>
 <p>このページは、schema.org に含まれるバージョン 1.0 のプロパティを説明する。プロジェクトの作業は進行中であり、<a href="/wiki/WebSchemas/Accessibility/ToDo" title="WebSchemas/Accessibility/ToDo">1.0 以降に追加のプロパティが検討されている</a>。参加方法については、<a href="http://www.a11ymetadata.org">a11ymetadata.org</a> の Web サイトを参照されたい。</p>
@@ -100,7 +103,7 @@
 <li>UIAutomation</li>
 </ul>
 </td>
-<td>リソースは、参照されたアクセシビリティ API と互換性があることを示す。</td>
+<td><p>リソースは、参照されたアクセシビリティ API と互換性があることを示す。</p></td>
 </tr>
 <tr>
 <td>accessibilityControl</td>
@@ -115,7 +118,7 @@
 <li>fullVoiceControl</li>
 </ul>
 </td>
-<td>全てのアプリケーション機能にアクセスできるひとつ以上の入力メソッドを識別する。</td>
+<td><p>全てのアプリケーション機能にアクセスできるひとつ以上の入力メソッドを識別する。</p></td>
 </tr>
 <tr>
 <td>accessMode</td>
@@ -135,7 +138,7 @@
 <li>visual</li>
 </ul>
 </td>
-<td>人間が情報を処理または知覚することができる人間の知覚システムまたは認知能力。</td>
+<td><p>人間が情報を処理または知覚することができる人間の知覚システムまたは認知能力。</p></td>
 </tr>
 <tr>
 <td>accessModeSufficient</td>
@@ -148,7 +151,7 @@
 <li>visual</li>
 </ul>
 </td>
-<td>リソースの全ての知的コンテンツを理解するのに十分な単一または複合した accessModode のリスト。</td>
+<td><p>リソースの全ての知的コンテンツを理解するのに十分な単一または複合した accessModode のリスト。</p></td>
 </tr>
 <tr>
 <td>accessibilitySummary</td>
@@ -157,7 +160,7 @@
 <td>
 <p>アクセシビリティ機能と欠如の人間が可読可能な要約。</p>
 </td>
-<td>他のアクセシビリティメタデータと一貫するが、「短い概要は存在するが、長い概要は非視覚的のユーザーに必要である。」や「短い概要が存在し、長い概要は必要ない。」などの微妙な表現を含む、特定のアクセシビリティ機能または欠如の人間が可読可能な要約。</td>
+<td><p>他のアクセシビリティメタデータと一貫するが、「短い概要は存在するが、長い概要は非視覚的のユーザーに必要である。」や「短い概要が存在し、長い概要は必要ない。」などの微妙な表現を含む、特定のアクセシビリティ機能または欠如の人間が可読可能な要約。</p></td>
 </tr>
 </table>
 <h2>accessibilityFeature の詳細</h2>
@@ -182,18 +185,20 @@
 <td>
 <p>highContrastAudio</p>
 </td>
-<td>前景に発話を含む音声コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html">WCAG 達成基準 1.4.7</a> に設定されているコントラストの閾値を満たしている。達成基準は音声の適合を追加できるが、必須ではない。<ul>
+<td><p>前景に発話を含む音声コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-noaudio.html">WCAG 達成基準 1.4.7</a> に設定されているコントラストの閾値を満たしている。達成基準は音声の適合を追加できるが、必須ではない。</p><ul>
 <li>/noBackground - 背景のノイズが存在しない</li>
 <li>/reducedBackground - 前景の発話と背景のノイズとの間に、少なくとも 20db の差がある</li>
 <li>/switchableBackground - 背景のノイズをオフにできる（十分なコントラストが満たされない場合もある）</li>
 </ul>
+<p><span class="annotation">訳者注：WCAG 達成基準 1.4.7 は、レベル AAA である。EPUB Accessibility 仕様は、EPUB 出版物がレベル A に適合することを必須とし、レベル AA に適合することを推奨している。</span></p>
 </td>
 </tr>
 <tr>
 <td>
 <p>highContrastDisplay</p>
 </td>
-<td>コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html">WCAG 達成基準 1.4.6</a> に設定されている視覚的なコントラストの閾値を満たしている。</td>
+<td><p>コンテンツは、<a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html">WCAG 達成基準 1.4.6</a> に設定されている視覚的なコントラストの閾値を満たしている。</p>
+<p><span class="annotation">訳者注：WCAG 達成基準 1.4.6 は、レベル AAA である。EPUB Accessibility 仕様は、EPUB 出版物がレベル A に適合することを必須とし、レベル AA に適合することを推奨している。</span></p></td>
 </tr>
 <tr>
 <td>
@@ -218,6 +223,7 @@
 <li>/background-color</li>
 </ul>
 <p>多くの CSS 表示プロパティは変更できるが、（画像ベースのコンテンツなど）全てのアクセシビリティを向上させるわけではないことに注意されたい。</p>
+<p><span class="annotation">訳者注：現状では、ユーザーがリーディングシステムを介して任意のカスタム CSS スタイルシートを適用することはできない。表示内容の変更はリーディングシステムに依存しているため、どのリーディングシステムで読むかによって、ユーザーの制御可能な範囲が異なる。よって、コンテンツとしてこの値をサポートするなら、固定値（px など）を使用していない場合であろう。</span></p>
 </td>
 </tr>
 </table>
@@ -232,43 +238,52 @@
 <td>
 <p>annotations</p>
 </td>
-<td>作品には、作者、インストラクターおよび/またはその他の注釈が包含されている。</td>
+<td><p>作品には、作者、インストラクターおよび/またはその他の注釈が包含されている。</p></td>
 </tr>
 <tr>
 <td>
 <p>bookmarks</p>
 </td>
-<td>作品に、キーポイントへのナビゲーションを容易にするブックマークが包含されている。</td>
+<td><p>作品に、キーポイントへのナビゲーションを容易にするブックマークが包含されている。</p>
+<p><span class="annotation">訳者注：EPUB でこの機能に近いものは、EPUB ナビゲーション ドキュメント nav 要素の epub:type 属性に設定する landmarks と思われる（つまり、&lt;nav epub:type="landmarks"&gt;）。</span></p></td>
 </tr>
 <tr>
 <td>
 <p>index</p>
 </td>
-<td>作品に、コンテンツへの索引が包含されている。</td>
+<td><p>作品に、コンテンツへの索引が包含されている。</p></td>
 </tr>
 <tr>
 <td>
 <p>printPageNumbers</p>
 </td>
-<td>作品に、印刷物のページ番号と同等のものが包含されている。この設定は、等価の印刷物がある電子書籍で最も一般的に使用される。</td>
+<td><p>作品に、印刷物のページ番号と同等のものが包含されている。この設定は、等価の印刷物がある電子書籍で最も一般的に使用される。</p>
+<p><span class="annotation">訳者注：EPUB の場合、詳細は <a href="http://www.idpf.org/epub/a11y/techniques/techniques.html#sec-epub-page-markers">5.1 ページマーカー - EPUB Accessibility Techniques 1.0</a> を参照されたい。</span></p></td>
 </tr>
 <tr>
 <td>
 <p>readingOrder</p>
 </td>
-<td>コンテンツの読み上げ順序は、（例えば、図表、サイドバーおよびその他の補助的なコンテンツが自動的にスキップされたり、手動でエスケープされるようにマークアップされているなど）マークアップで明確に定義されている。</td>
+<td><p>コンテンツの読み上げ順序は、（例えば、図表、サイドバーおよびその他の補助的なコンテンツが自動的にスキップされたり、手動でエスケープされるようにマークアップされているなど）マークアップで明確に定義されている。</p>
+<p><span class="annotation">訳者注：EPUB は、「アクセシビリティを評価するとき、個々のページは、単独で検討することはできない。むしろ、大きな作品の一部として全体としてのアクセシビリティを評価する必要がある。」とある（<a href="https://www.w3.org/Submission/2017/SUBM-epub-a11y-20170125/#sec-wcag-eval-page-pub">4.3.2.1 ページと出版物 - EPUB Accessibility 1.0</a>）。そういう意味では、スパインによってコンテンツ ドキュメントの読み上げ順序を定義している EPUB は標準としてこの機能を提供していると言える。 </span></p></td>
 </tr>
 <tr>
 <td>
 <p>structuralNavigation</p>
 </td>
-<td>ドキュメントの階層を完全かつ正確に反映した作品の見出しの使用は、支援技術によるナビゲーションを可能にする。</td>
+<td><p>ドキュメントの階層を完全かつ正確に反映した作品の見出しの使用は、支援技術によるナビゲーションを可能にする。</p>
+<p><span class="annotation">訳者注：EPUB の場合、詳細は <a href="http://www.idpf.org/epub/a11y/techniques/techniques.html#titles-002">TITLES-002: 番号付きの見出しが出版物の階層を反映するように保証する - EPUB Accessibility Techniques 1.0</a> を参照されたい。</span></p></td>
+</tr>
+<td>
+<p>tableOfContents</p>
+</td>
+<td><p><span class="annotation">訳者注：原文に記載なし。目次が提供されている場合に設定すると考えて間違いない。EPUB の場合、この機能は EPUB ナビゲーション ドキュメントが相当する。</span></p></td>
 </tr>
 <tr>
 <td>
 <p>taggedPDF</p>
 </td>
-<td> PDF 内の構造には、コンテンツのナビゲーションを改善するためのタグが付けられている。</td>
+<td><p>PDF 内の構造には、コンテンツのナビゲーションを改善するためのタグが付けられている。</p></td>
 </tr>
 </table>
 <h3>コンテンツ制御のための機能</h3>
@@ -282,19 +297,20 @@
 <td>
 <p>synchronizedAudioText</p>
 </td>
-<td>音声とテキストの両方を提供するリソースを、同時にレンダリングできる情報を記述する。同期の精度は指定されていない。この用語は、同期される唯一の材料がドキュメントの見出しである時は推奨されない。</td>
+<td><p>音声とテキストの両方を提供するリソースを、同時にレンダリングできる情報を記述する。同期の粒度は指定されていない。この用語は、同期される唯一の材料がドキュメントの見出しである時は推奨されない。</p>
+<p><span class="annotation">訳者注：EPUB の場合、この機能は、メディア オーバーレイで実現できる。</span></p></td>
 </tr>
 <tr>
 <td>
 <p>timingControl</p>
 </td>
-<td>時間の経過でインタラクションするコンテンツの場合、この値は、（例えば、一時停止とリセット）ユーザーが必要に応じてタイミングを制御できることを示す。</td>
+<td><p>時間の経過でインタラクションするコンテンツの場合、この値は、（例えば、一時停止とリセット）ユーザーが必要に応じてタイミングを制御できることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>unlocked</p>
 </td>
-<td>デジタル著作権管理やその他のコンテンツ制限プロトコルは、リソースに適用されていない。</td>
+<td><p>デジタル著作権管理やその他のコンテンツ制限プロトコルは、リソースに適用されていない。</p></td>
 </tr>
 </table>
 <h3>拡張のための機能</h3>
@@ -308,85 +324,92 @@
 <td>
 <p>alternativeText</p>
 </td>
-<td>代替テキストは、（例えば、HTML alt 属性を介して）視覚的なコンテンツに提供されている。</td>
+<td><p>代替テキストは、（例えば、HTML alt 属性を介して）視覚的なコンテンツに提供されている。</p></td>
 </tr>
 <tr>
 <td>
 <p>audioDescription</p>
 </td>
-<td>（例えば、HTML5 track 要素を介して）解説放送（オーディオ ディスクリプション）が利用できる。</td>
+<td><p>（例えば、HTML5 track 要素を介して）解説放送（オーディオ ディスクリプション）が利用できる。</p></td>
 </tr>
 <tr>
 <td>
 <p>braille</p>
 </td>
-<td>コンテンツは点字形式であるか、または代替版が点字で利用できる。この値は、点字の異なるタイプ（/ASCII、/unicode、/music、/math、/chemistry または /nemeth）、および点字が短縮されているかどうか（/grade1 および /grade2）を識別するために拡張できる。点字が適合するコードなどの、その他の拡張も指定できる。</td>
+<td><p>コンテンツは点字形式であるか、または代替版が点字で利用できる。この値は、点字の異なるタイプ（/ASCII、/unicode、/music、/math、/chemistry または /nemeth）、および点字が短縮されているかどうか（/grade1 および /grade2）を識別するために拡張できる。点字が適合するコードなどの、その他の拡張も指定できる。</p></td>
 </tr>
 <tr>
 <td>
 <p>captions</p>
 </td>
-<td>同期キャプションが、音声と動画コンテンツで利用できることを示す。</td>
+<td><p>同期キャプションが、音声と動画コンテンツで利用できることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>ChemML</p>
 </td>
-<td>化学情報が、ChemML マークアップ言語を使用してコード化されていることを示す。</td>
+<td><p>化学情報が、ChemML マークアップ言語を使用してコード化されていることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>describedMath</p>
 </td>
-<td>数学の方程式のテキストによる説明が、画像ベースの方程式の alt 属性、MathML 方程式の alttext 属性、または他の手段のいずれかによって包含されている。</td>
+<td><p>数学の方程式のテキストによる説明が、画像ベースの方程式の alt 属性、MathML 方程式の alttext 属性、または他の手段のいずれかによって包含されている。</p></td>
 </tr>
 <tr>
 <td>
-<p>latex MathML</p>
+<p>latex</p>
 </td>
-<td>数学の方程式と公式が、指定されたマークアップ言語（LaTeXまたはMathML）を使用してエンコードされていることを示す。</td>
+<td><p>数学の方程式と公式が、指定されたマークアップ言語（LaTeX）を使用してエンコードされていることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>longDescription</p>
 </td>
-<td>概要が、画像ベースのビジュアルコンテンツ、および/または表、計算、図表、チャートなどの複雑な構造のために提供されている。</td>
+<td><p>概要が、画像ベースのビジュアルコンテンツ、および/または表、計算、図表、チャートなどの複雑な構造のために提供されている。</p></td>
+</tr>
+<tr>
+<td>
+<p>MathML</p>
+</td>
+<td><p>数学の方程式と公式が、指定されたマークアップ言語（MathML）を使用してエンコードされていることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>rubyAnnotations</p>
 </td>
-<td>ルビ注釈が、コンテンツに提供されることを示す。ルビ注釈は、中国語や日本語のような言語のために、文字の発音ガイドとして使用される。難しい漢字や CJK の表意文字を、よりアクセシブルにする。ruby/annotations/* の欠如は、CJK の表意文字にルビがないことを意味する。</td>
+<td><p>ルビ注釈が、コンテンツに提供されることを示す。ルビ注釈は、中国語や日本語のような言語のために、文字の発音ガイドとして使用される。難しい漢字や CJK の表意文字を、よりアクセシブルにする。ruby/annotations/* の欠如は、CJK の表意文字にルビがないことを意味する。</p></td>
 </tr>
 <tr>
 <td>
 <p>signLanguage</p>
 </td>
-<td>同期している手話は、音声および動画コンテンツで利用できる。値は、ISO 639 手話コードを追加することによって拡張してもよい。例えば、アメリカ手話は /sgn-en-us である。</td>
+<td><p>同期している手話は、音声および動画コンテンツで利用できる。値は、ISO 639 手話コードを追加することによって拡張してもよい。例えば、アメリカ手話は /sgn-en-us である。</p></td>
 </tr>
+<tr>
 <tr>
 <td>
 <p>tactileGraphic</p>
 </td>
-<td>触図が提供されている。例えば、触図のための BANA ガイドラインと標準に記述されているように。</td>
+<td><p>触図が提供されている。例えば、触図のための BANA ガイドラインと標準に記述されているように。</p></td>
 </tr>
 <tr>
 <td>
 <p>tactileObject</p>
 </td>
-<td>コンテンツは、触覚的な 3D オブジェクトであるか、または生成するモデルが包含されている。</td>
+<td><p>コンテンツは、触覚的な 3D オブジェクトであるか、または生成するモデルが包含されている。</p></td>
 </tr>
 <tr>
 <td>
 <p>transcript</p>
 </td>
-<td>音声コンテンツのトランスクリプトが利用可能であることを示す。</td>
+<td><p>音声コンテンツのトランスクリプトが利用可能であることを示す。</p></td>
 </tr>
 <tr>
 <td>
 <p>ttsMarkup</p>
 </td>
-<td> SSML、PLS 辞書および CSS3 Speech プロパティのうちのひとつ以上が、TTS 再生の品質を高めるために使用されている。</td>
+<td><p>SSML、PLS 辞書および CSS3 Speech プロパティのうちのひとつ以上が、TTS 再生の品質を高めるために使用されている。</p></td>
 </tr>
 </table>
 </body>
